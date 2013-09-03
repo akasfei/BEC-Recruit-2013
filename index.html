@@ -221,7 +221,9 @@
     <div class="tab-pane" id="joinus">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <form action="" class="form-horizontal card">
+          <form action="" class="form-horizontal card" id="apply-form">
+            <div class="alert alert-success hidden">恭喜！你的报名表单已经成功提交。俱乐部的工作人员将尽快根据您提交的资料确定您是否适合加入我们俱乐部，并将尽快通过您提供的联系方式告知进展。</div>
+            <div class="alert alert-danger hidden">啊噢，出错了！<p id="error-text"></p></div>
             <div class="form-group">
               <label for="stu_name" class="col-sm-2 control-label">姓名</label>
               <div class="col-sm-10">
@@ -303,7 +305,7 @@
             </div>
             <div class="form-group">
               <div class="col-sm-10 col-sm-offset-2">
-                <a href="#" class="btn btn-primary">提交</a>
+                <a href="javascript:void(0)" class="btn btn-primary" id="form-submit" data-loading-text="提交中……">提交</a>
               </div>
             </div>
 

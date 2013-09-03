@@ -28,6 +28,10 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+.hidden {
+  display: none;
+}
+
 form.card {
   text-align: left;
 }
