@@ -1,0 +1,13 @@
+---
+applications:
+- name: hustbaidu
+  memory: 128M
+  instances: 4
+  command: node app.js
+  path: .
+  services:
+    mongodb-BEC2013:
+      label: mongolab
+      provider: mongolab
+      version: n/a
+      plan: sandbox
