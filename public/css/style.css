@@ -83,3 +83,9 @@ form.card {
 .group-5 .group-title:before {
   background: #AA66CC;
 }
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 0 !important;
+  text-align: center;
+}
