@@ -16,6 +16,15 @@ $.fn.serializeObject = function() {
 
 var parseForm = function() {
   var data = $('#apply-form').serializeObject();
+  for (id in data) {
+    if (data[id].length < 1) {
+      $('#' + id).parents('.form-group').addClass('has-error');
+      $('#error-text').text('有地方没填喔～');
+      $('#apply-form .alert-danger').removeClass('hidden');
+      return null;
+    }
+    $('#' + id).parents('.form-group').removeClass('has-error');
+  }
   return data;
 }
 
@@ -39,6 +48,7 @@ $(document).ready(function (e){
         type: 'POST',
         success: function (data, status) {
           $this.button('reset');
+          $('.has-error').removeClass('has-error')
           $('#apply-form .alert-success').removeClass('hidden');
           $('#apply-form .alert-danger').addClass('hidden');
           $('input').val('');
